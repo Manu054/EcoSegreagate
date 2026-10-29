@@ -1,0 +1,13 @@
+{
+  "model_name": "efficientnet_b0",
+  "display_name": "EFFICIENTNET_B0",
+  "architecture": "efficientnet_b0",
+  "class_names": [
+    "organic",
+    "recyclable"
+  ],
+  "num_classes": 2,
+  "best_val_accuracy": 0.9692307692307692,
+  "best_val_loss": 0.15749385219353895,
+  "epochs_trained": 4
+}

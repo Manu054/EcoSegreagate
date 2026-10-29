@@ -1,0 +1,11 @@
+CLASSIFICATION REPORT: ResNet50
+============================================================
+
+              precision    recall  f1-score   support
+
+     organic     0.8966    1.0000    0.9455        52
+  recyclable     1.0000    0.8983    0.9464        59
+
+    accuracy                         0.9459       111
+   macro avg     0.9483    0.9492    0.9459       111
+weighted avg     0.9515    0.9459    0.9460       111

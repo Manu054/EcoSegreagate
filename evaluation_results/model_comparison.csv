@@ -1,0 +1,4 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Inference Latency (ms),Model Size (MB),Training Time (s),Parameter Count
+MobileNetV2,0.991,0.9917,0.9904,0.9909,0.991,56.88,9.34,0.0,2388354
+ResNet50,0.9459,0.9483,0.9492,0.9459,0.946,164.68,91.98,0.0,24033602
+EfficientNetB0,0.9369,0.9381,0.9395,0.9369,0.937,122.81,16.18,0.0,4172030

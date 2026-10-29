@@ -1,0 +1,13 @@
+{
+  "model_name": "mobilenet_v2",
+  "display_name": "MobileNetV2",
+  "architecture": "mobilenet_v2",
+  "class_names": [
+    "organic",
+    "recyclable"
+  ],
+  "num_classes": 2,
+  "best_val_accuracy": 0.9904761904761905,
+  "best_val_loss": 0.02025701089185618,
+  "epochs_trained": 6
+}

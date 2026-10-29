@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "description": "Explicit mapping configuration connecting detailed waste categories to primary segregation streams and physical sorting bin channels.",
+  "primary_categories": [
+    "Biodegradable",
+    "Non-Biodegradable"
+  ],
+  "class_mappings": {
+    "organic": {
+      "primary_category": "Biodegradable",
+      "sub_category": "Organic / Compostable",
+      "bin_name": "Green Bin (Compost)",
+      "servo_angle_deg": 45,
+      "is_recyclable": false,
+      "disposal_instructions": "Send to anaerobic digestion or composting facility.",
+      "nuance_note": "Includes food scraps, vegetable peels, garden waste. Decomposes naturally within weeks to months."
+    },
+    "paper": {
+      "primary_category": "Biodegradable",
+      "sub_category": "Recyclable Fiber / Paper",
+      "bin_name": "Blue Bin (Clean Dry Paper)",
+      "servo_angle_deg": 75,
+      "is_recyclable": true,
+      "disposal_instructions": "Keep dry and clean; route to pulping and fiber recovery.",
+      "nuance_note": "Paper is technically biodegradable (cellulose), yet highly valuable as a recyclable material if unsoiled. Soiled paper should go to composting."
+    },
+    "cardboard": {
+      "primary_category": "Biodegradable",
+      "sub_category": "Corrugated Fiber / Cardboard",
+      "bin_name": "Blue Bin (Cardboard)",
+      "servo_angle_deg": 75,
+      "is_recyclable": true,
+      "disposal_instructions": "Flatten and keep dry; send to cardboard repulping.",
+      "nuance_note": "Biodegradable naturally, but prioritized for industrial paper mill recycling when not contaminated with food grease."
+    },
+    "plastic": {
+      "primary_category": "Non-Biodegradable",
+      "sub_category": "Polymers / Recyclable Plastics",
+      "bin_name": "Yellow Bin (Rigid & Film Plastics)",
+      "servo_angle_deg": 120,
+      "is_recyclable": true,
+      "disposal_instructions": "Rinse clean and compact; sort by polymer code (PET, HDPE, PP).",
+      "nuance_note": "Non-biodegradable (persists 100-500+ years). Not all plastic resin codes are economically recyclable in every municipality."
+    },
+    "metal": {
+      "primary_category": "Non-Biodegradable",
+      "sub_category": "Metals / Ferrous & Non-Ferrous",
+      "bin_name": "Grey Bin (Metals)",
+      "servo_angle_deg": 150,
+      "is_recyclable": true,
+      "disposal_instructions": "Route to magnetic/eddy-current separator and smelting.",
+      "nuance_note": "Inorganic and non-biodegradable, but indefinitely recyclable with high energy conservation."
+    },
+    "glass": {
+      "primary_category": "Non-Biodegradable",
+      "sub_category": "Vitreous / Glass Cullet",
+      "bin_name": "Teal Bin (Glass)",
+      "servo_angle_deg": 165,
+      "is_recyclable": true,
+      "disposal_instructions": "Handle with care to prevent breakage; send to color-sorted cullet reprocessing.",
+      "nuance_note": "Inorganic and non-biodegradable, 100% recyclable infinitely without degradation of purity."
+    },
+    "trash": {
+      "primary_category": "Non-Biodegradable",
+      "sub_category": "Residual Non-Recyclable Waste",
+      "bin_name": "Black / Red Bin (Landfill / Energy Recovery)",
+      "servo_angle_deg": 180,
+      "is_recyclable": false,
+      "disposal_instructions": "Send to sanitary landfill or waste-to-energy incineration.",
+      "nuance_note": "Composite materials, ceramic, contaminated sanitary items, or non-recyclable non-biodegradable residues."
+    },
+    "recyclable": {
+      "primary_category": "Non-Biodegradable",
+      "sub_category": "General Recyclable (Binary Kaggle dataset)",
+      "bin_name": "Yellow Bin (Recyclable Stream)",
+      "servo_angle_deg": 135,
+      "is_recyclable": true,
+      "disposal_instructions": "Route to Materials Recovery Facility (MRF) for optical sorting.",
+      "nuance_note": "Used when training on Kaggle Binary dataset (Organic vs Recyclable). In the binary dataset, Recyclable represents inorganic non-biodegradable materials."
+    }
+  },
+  "default_fallback": {
+    "primary_category": "Non-Biodegradable",
+    "sub_category": "Unclassified / Uncertain",
+    "bin_name": "Inspection / Manual Review Bin",
+    "servo_angle_deg": 0,
+    "is_recyclable": false,
+    "disposal_instructions": "Retain for human review or automated secondary scanner.",
+    "nuance_note": "Activated whenever prediction confidence falls below the safety threshold or out-of-distribution item is detected."
+  }
+}

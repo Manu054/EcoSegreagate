@@ -1,0 +1,11 @@
+CLASSIFICATION REPORT: EfficientNetB0
+============================================================
+
+              precision    recall  f1-score   support
+
+     organic     0.8947    0.9808    0.9358        52
+  recyclable     0.9815    0.8983    0.9381        59
+
+    accuracy                         0.9369       111
+   macro avg     0.9381    0.9395    0.9369       111
+weighted avg     0.9408    0.9369    0.9370       111

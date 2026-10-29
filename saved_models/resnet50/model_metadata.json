@@ -1,0 +1,13 @@
+{
+  "model_name": "resnet50",
+  "display_name": "RESNET50",
+  "architecture": "resnet50",
+  "class_names": [
+    "organic",
+    "recyclable"
+  ],
+  "num_classes": 2,
+  "best_val_accuracy": 0.9846153846153847,
+  "best_val_loss": 0.0816714645578311,
+  "epochs_trained": 4
+}
